@@ -1,0 +1,48 @@
+@import './utils/vars';
+@import './components/header-hero';
+@import './components/about-modal';
+@import './components/about';
+@import './components/advantages';
+@import './components/products';
+@import './components/gallery';
+@import './components/swiper';
+@import './components/locations';
+@import './components/locationsModal';
+@import './components/footer';
+@import './components/buy-now-modal';
+@import './components/swiper';
+@import './components/mobile-menu';
+
+// @import Swiper, { Navigation, Pagination } from 'swiper';
+// @import 'swiper/css';
+// @import 'swiper/css/navigation';
+// @import 'swiper/css/pagination';
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin: 0 auto;
+  // min-width: 300px;
+  max-width: 1250px;
+}
+
+.hidden{
+  display:none;
+}
+
+.unstyled-list {
+  list-style: none;
+}
+
+ul,
+h3,
+h4 {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  // padding-inline-start: 0px;
+}

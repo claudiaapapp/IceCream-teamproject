@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IceCream</title>
+  <link rel="icon shortcut" type="image/png" href="/logo.c493797d.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Titan+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/index.b07a87f3.css">
+</head>
+<body>
+  <!--ModalSection-->
+  <div class="about-modal about-modal-is-hidden" data-modal="">
+    <div class="about-modal-inner-div">
+      <button data-modal-close="" class="about-modal-button close-button">
+        <svg width="15" height="15">
+          <use href="/icons-svg.854772c7.svg#icon-close"></use>
+        </svg>
+      </button>
+      <p class="description">Ice cream is a frozen dessert, typically made from milk or cream and flavoured with a
+        sweetener, either sugar or an alternative, and a spice, such as cocoa or vanilla, or with fruit such as
+        strawberries or peaches. It can also be made by whisking a flavored cream base and liquid nitrogen together.
+        Food coloring is sometimes added, in addition to stabilizers. The mixture is cooled below the freezing point of
+        water and stirred to incorporate air spaces and to prevent detectable ice crystals from forming. The result is a
+        smooth, semi-solid foam that is solid at very low temperatures (below 2 °C or 35 °F). It becomes more malleable
+        as its temperature increases.</p>
+    </div>
+  </div>
+  <!--mobile-menu-->
+  <div class="menu-container js-menu-container nav-menu" id="mobile-menu">
+    <button class="menu-toggle js-close-menu nav-menu__btn">
+      <svg class="nav-menu__close-icon" width="20" height="32">
+          <use href="/icons-svg.854772c7.svg#icon-close"></use> 
+      </svg>
+    </button>
+    <button data-modal-open="" class="buy-modal-button-menu button nav-menu__buy-btn" type="button">
+      Buy now
+      <svg class="nav-menu__btn-icon" width="8" height="8">
+        <use href="/icons.9d5b6e5e.svg#icon-btn-arrow"></use>
+      </svg>
+    </button>
+    <nav>
+      <ul class="nav-menu__list mobile-menu">
+        <li><a class="nav-menu__item" href="#home">Home</a></li>
+        <li><a class="nav-menu__item" href="#about">About us</a></li>
+        <li><a class="nav-menu__item" href="#advantages">How it’s made?</a></li>
+        <li><a class="nav-menu__item" href="#products">Our products</a></li>
+        <li><a class="nav-menu__item" href="#location">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!--Buy-now-modal-->
+  <div class="buy-modal buy-modal-is-hidden" data-modal="">
+  <div class="buy-modal-inner-div">
+    <button data-modal-close="" class="buy-modal-button buy-modal__btn" type="button">
+        <svg class="buy-modal__close-icon" width="12" height="12">
+            <use href="/icons-svg.854772c7.svg#icon-close"></use> 
+        </svg>
+    </button>
+      <h1 class="buy-modal__title"><span class="buy-modal__title--red">Buy </span>Now</h1>
+      <ul class="buy-modal__grid">
+        <li class="buy-modal__card">
+          <img class="buy-modal__img" srcset="/icecream-m-m.0279d2b8.png 1x, /icecream-m-2x.bb79f461.png 2x" src="/icecream-m-m.0279d2b8.png" alt="icecrem-balls">
+          <p class="buy-modal__text">250 g</p>
+          <label class="buy-modal__order-label">
+            <input class="buy-modal__order-input" type="number" name="height" min="0" max="200" step="1" value="0">
+          </label>
+        </li>
+        <li class="buy-modal__card">
+            <img class="buy-modal__img buy-modal__img--coffe-color" srcset="/icecoffee-m.d5570efe.png 1x, /icecoffee-m-2x.6448258e.png 2x" src="/icecoffee-m.d5570efe.png" alt="icecoffe">
+            <p class="buy-modal__text">200 ml</p>
+            <label class="buy-modal__order-label">
+              <input class="buy-modal__order-input" type="number" name="height" min="0" max="200" step="1" value="0">
+            </label>
+        </li>
+        <li class="buy-modal__card">
+          <img class="buy-modal__img buy-modal__img--green-color" srcset="/milkshake-m.72d87258.png 1x, /milkshake-m-2x.3cadbc04.png 2x" src="/milkshake-m.72d87258.png" alt="milkshake">
+          <p class="buy-modal__text">200 ml</p>
+          <label class="buy-modal__order-label">
+            <input class="buy-modal__order-input" type="number" name="height" min="0" max="200" step="1" value="0">
+          </label>
+        </li>
+      </ul>
+        <form class="buy-modal__form">
+          <label class="buy-modal__label">
+            Name
+            <svg class="buy-modal__icon" width="20" height="14">
+              <use href="/icons.9d5b6e5e.svg#icon-name"></use>
+            </svg>
+            <input class="buy-modal__input" type="text" name="name" pattern="[a-zA-Zа-яА-Я]+" minlength="2" required="">
+          </label>
+          <label class="buy-modal__label">
+            E-mail
+            <svg class="buy-modal__icon" width="18" height="16">
+              <use href="/icons.9d5b6e5e.svg#icon-envelope"></use>
+            </svg>
+            <input class="buy-modal__input" type="email" name="email" required="">
+          </label>
+          <label class="buy-modal__label">
+            Phone number
+            <svg class="buy-modal__icon" width="22" height="16">
+              <use href="/icons.9d5b6e5e.svg#icon-telephone"></use>
+            </svg>
+            <input class="buy-modal__input" type="number" name="phone" autocomplete="off">
+          </label>
+          <label class="buy-modal__label">
+            Leave a comment
+            <textarea class="buy-modal__textarea" name="comment" placeholder="text"></textarea>
+          </label>
+        </form>
+    <button class="buy-modal__submit-btn" type="submit">Send</button>
+  </div>
+  </div>
+
+  <!-- Locations Modal -->
+  <div class="modal-locations location-is-hidden" data-modal="">
+    <div class="modal-locations__inside">
+      <button class="modal-locations__button location-button" data-modal-close="">
+        <svg>
+          <use href="/icons-svg.854772c7.svg#icon-x-altx-alt"></use>
+        </svg>
+      </button>
+      <div class="container-modal">
+        <svg class="container-modal__svg" fill="crimson">
+          <use href="/icons-svg.854772c7.svg#icon-icecream"></use>
+        </svg>
+      </div>
+      <h2 class="modal-locations__title"> OUR LOCATIONS</h2>
+      <iframe class="frame-locations" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.6851669235175!2d1.4026918508752027!3d38.88544437947223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129945cd5c67f891%3A0xbf31e71e9658c299!2sUshua%C3%AFa%20Ibiza!5e0!3m2!1sen!2sus!4v1680960232562!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <form class="frame-locations__form" target="_blank">
+        action="https://www.google.com/maps/place/Ushua%C3%AFa+Ibiza/@38.8854444,1.4026919,17z/data=!3m1!4b1!4m6!3m5!1s0x129945cd5c67f891:0xbf31e71e9658c299!8m2!3d38.8854444!4d1.4048859!16s%2Fm%2F0lkntjz?"></form>
+        <button class="frame-locations__button" type="submit">Open map</button>
+    </div>
+  </div>
+  <main>
+     <header class="header-section" id="home">
+    <div class="container">
+      <h1 hidden="" class="gallery">gallery</h1>
+      <h2 hidden="" class="gallery">gallery</h2>
+      <div class="header">
+        <svg class="header__icon" width="199" height="50">
+          <use href="/icons.9d5b6e5e.svg#icon-logo"></use>
+        </svg>
+        <nav class="no-display">
+        <ul class="header__list menu">
+          <li><a class="header__item" href="#home">Home</a></li>
+          <li><a class="header__item" href="#about">About us</a></li>
+          <li><a class="header__item" href="#advantages">How it’s made?</a></li>
+          <li><a class="header__item" href="#products">Our products</a></li>
+          <li><a class="header__item" href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+        <button class="menu-toggle js-open-menu header__menu-btn " aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="20" height="12">
+            <use href="/icons.9d5b6e5e.svg#icon-Burger"></use>
+          </svg>
+        </button> 
+        <button data-modal-open="" class="buy-modal-button button header__buy-btn" type="button">
+          Buy now
+          <svg class="header__btn-icon" width="8" height="8">
+            <use href="/icons.9d5b6e5e.svg#icon-btn-arrow"></use>
+          </svg>
+        </button>
+        </div>
+        <section class="hero">
+        <div>
+          <div class="hero__title">
+            ice cream <br>made with <br>
+            <span class="hero__title--color-red">passion</span>
+          </div>
+          <div class="hero__btns">
+          <div>
+               <form>
+              <button formaction="#products" class="hero__btn" type="submit">Products
+              </button>
+
+            </form>
+          </div>
+          <div>
+              <form>
+              <button type="submit" class="hero__btn hero__btn--white" formaction="#advantages">How it’s made? </button>
+            </form>
+
+          </div>
+        </div>
+          <div class="info">
+          <img class="info__img" srcset="/milk-img.3fe52148.png 1x, /milk-img@2x.be739022.png 2x" src="/milk-img.3fe52148.png" alt="Milk">
+          <div class="info__side">
+            <p class="info__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et
+            </p>
+            <form>
+              <button formaction="#gallery" class="info__btn" type="submit">
+                <svg class="info__icon" width="20" height="10">
+                  <use href="/icons.9d5b6e5e.svg#icon-arrow"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+          </div>
+        </div>
+        <div>
+          <ul class="sell-point">
+            <li class="sell-point__item">
+              <svg class="sell-point__icon" width="30" height="30">
+                <use href="/icons.9d5b6e5e.svg#icon-header-dot"></use>
+              </svg>
+              <h2 class="sell-point__no">16</h2>
+              <p class="sell-point__type">cafes</p>
+            </li>
+            <li class="sell-point__item">
+              <svg class="sell-point__icon" width="30" height="30">
+                <use href="/icons.9d5b6e5e.svg#icon-header-dot"></use>
+              </svg>
+              <h2 class="sell-point__no">23</h2>
+              <p class="sell-point__type">food trucks</p>
+            </li>
+          </ul>
+            <img class="hero__img" srcset="/header-img.aaf6b86d.png 1x, /header-img@2x.01c293a0.png 2x" src="/header-img.aaf6b86d.png" alt="Enjoy icecream">
+        </div>
+      </section>
+    </div>
+</header>
+
+
+    <!-- <!DOCTYPE html>
+<html> -->
+<!-- <head>
+    <title>Products</title>
+    <link rel="stylesheet" href="css/index.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+  </head> -->
+  <section class="products" id="products">
+    <div class="products-section-container"></div>
+    <p class="products__subtitle">100% natural</p>
+    <h2 class="products__title">Products</h2>
+    <ul class="products__list">
+      <li class="products__item">
+        <h3 class="products__type">Ice cream</h3>
+        <div class="points"></div>
+        <p class="products__information">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et
+        </p>
+        <button type="button" class="products__button" onclick="showOverlay('overlay1')">
+          <svg class="products__svg">
+            <use xlink:href="/products.c79a2974.svg#arrow-right"></use>
+          </svg>
+        </button>
+        <div id="overlay1" class="products__description">
+          <p class="overlay__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </li>
+      <li class="products__item">
+        <h3 class="products__type">Ice coffee</h3>
+        <div class="points"></div>
+        <p class="products__information">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et
+        </p>
+        <button type="button" class="products__button" onclick="showOverlay('overlay2')">
+          <svg class="products__svg">
+            <use xlink:href="/products.c79a2974.svg#arrow-right"></use>
+          </svg>
+        </button>
+        <div id="overlay2" class="products__description">
+          <p class="overlay__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </li>
+      <li class="products__item">
+        <h3 class="products__type">Milkshakes</h3>
+        <div class="points"></div>
+        <p class="products__information">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et
+        </p>
+        <button type="button" class="products__button" onclick="showOverlay('overlay3')">
+          <svg class="products__svg">
+            <use xlink:href="/products.c79a2974.svg#arrow-right"></use>
+          </svg>
+        </button>
+        <div id="overlay3" class="products__description">
+          <p class="overlay__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </li>
+    </ul>
+    
+  </section>
+
+<!-- <script src="./js/products.js"></script> -->
+<!-- </html> -->
+
+    <!-- AboutSection -->
+<section class="about-section" id="about">                
+    <div class="about-section__container container">
+        <h3 class="about-section__subtitle">tradition and love </h3>
+        <h2 class="about-section__title">how it’s made?</h2>
+        <ul class="about-section__list unstyled-list">
+            <li class="about-section__item-image">
+                <picture>
+                    <source media="screen and (max-width: 767px)" srcset="/cow-M-1x.df1cfb5f.png 1x, /cow-M-2x.bd3d3570.png 2x">
+                    <source media="screen and (min-width: 768px) and (max-width: 1199px)" srcset="/cow-T-1x.2f6fb426.png 1x, /cow-T-2x.ed5deef1.png 2x">
+                    <source media="screen and (min-width: 1200px)" srcset="/cow-D-1x.8c48846a.png 1x, /cow-D-2x.3767c91b.png 2x">  
+                    <img src="/cow-M-1x.df1cfb5f.png" alt="John Smith">                                
+                </picture>
+            </li>
+            <li class="about-section__item-description">
+                <div class="description">
+                    <ul class="description__list unstyled-list">
+                        <li class="description__item">
+                            <p class="description__main-text">
+                                Fusce ut velit laoreet, tempus arcu eu, molestie tortor. 
+                                Nam vel justo cursus, faucibus lorem eget, egestas eros. 
+                                Maecenas eleifend erat at justo fringilla.
+                            </p>
+                        </li>
+                        <li class="description__item">
+                            <p class="description__secondary-text">
+                                Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. 
+                                Mauris rhoncus orci in imperdiet placerat. 
+                                Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. 
+                                Cras massa nibh, tincidunt.
+                            </p>
+                            <p class="description__secondary-text">Aliquam erat volutpat. Aenean accumsan.</p>
+                        </li>
+                        <li class="description__item">
+                            <button data-modal-open="" class="about-modal-button button" type="button">
+                                Read more
+                                <svg width="4.4" height="8">
+                                    <use href="/icons-svg.854772c7.svg#icon-btn-arrow"></use>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>                            
+            </li>                        
+        </ul>
+    </div>
+</section>
+<!-- AdvantagesSection -->
+<section class="advantages-section" id="advantages">
+    <div class="advantages-section__container container">
+        <h2 hidden="">advantages</h2>
+        <ul class="advantages-section__list unstyled-list">
+            <li class="advantages-section__item advantages-section__item--one">
+                <h3 class="advantages-section__item-title">721</h3>
+                <p class="about-section__item-description">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>                        
+            </li>
+            <li class="advantages-section__item advantages-section__item--two">                            
+                <h3 class="advantages-section__item-title">16kg</h3>
+                <p class="about-section__item-description">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>                        
+            </li>
+            <li class="advantages-section__item advantages-section__item--three">                            
+                <h3 class="advantages-section__item-title">84</h3>
+                <p class="about-section__item-description">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>                        
+            </li>
+        </ul>
+    </div>
+</section>       
+
+    <section class="gallery" id="gallery">
+    <h2 hidden="" class="gallery">gallery</h2>
+    <div class="gallery__container">
+
+
+      <div class="gallery__container__c1">
+        <picture class="gallery__container__trans">
+            <source media="screen and (max-width: 767px)" srcset="/ice1_m1.937a248d.png 1x, /ice1_m2.34426f40.png 2x">
+            <source media="screen and (min-width: 768px) and (max-width: 1199px)" srcset="/ice1_t1.cba02553.png 1x, /ice1_t2.58fc7c3f.png 2x">
+            <source media="screen and (min-width: 1200px)" srcset="/ice1_d1.89be6d4d.png 1x, /ice1_d2.10426705.png 2x">  
+            <img src="/ice1_m1.937a248d.png" alt="ice1">                                
+        </picture>
+      </div>
+
+      <div class="gallery__container__c2">
+        <picture class="gallery__container__trans">
+            <source media="screen and (max-width: 767px)" srcset="/ice2_m1.81cc5d77.png 1x, /ice2_m2.f9358d59.png 2x">
+            <source media="screen and (min-width: 768px) and (max-width: 1199px)" srcset="/ice2_t1.07267b0f.png 1x, /ice2_t2.aa5a3b4e.png 2x">
+            <source media="screen and (min-width: 1200px)" srcset="/ice2_d1.2dac6e56.png 1x, /ice2_d2.10f6d6a6.png 2x">  
+            <img src="/ice2_m1.81cc5d77.png" alt="ice1">                                
+        </picture>
+
+        <picture class="gallery__container__trans">
+            <source media="screen and (max-width: 767px)" srcset="/ice3_m1.1d7aef0f.png 1x, /ice3_m2.0b7b3276.png 2x">
+            <source media="screen and (min-width: 768px) and (max-width: 1199px)" srcset="/ice3_t1.083be631.png 1x, /ice3_t2.8a375829.png 2x">
+            <source media="screen and (min-width: 1200px)" srcset="/ice3_d1.fad8c467.png 1x, /ice3_d2.0865fad4.png 2x">  
+            <img src="/ice3_m1.1d7aef0f.png" alt="ice1">                                
+        </picture>
+      </div>
+
+      <div class="gallery__container__c3">
+        <picture class="gallery__container__trans">
+            <source media="screen and (max-width: 767px)" srcset="/ice4_m1.cb5a16ee.png 1x, /ice4_m2.f142d5d4.png 2x">
+            <source media="screen and (min-width: 768px) and (max-width: 1199px)" srcset="/ice4_t1.b28488eb.png 1x, /ice4_t2.0b433535.png 2x">
+            <source media="screen and (min-width: 1200px)" srcset="/ice4_d1.287c489b.png 1x, /ice4_d2.4f37835c.png 2x">  
+            <img src="/ice4_m1.cb5a16ee.png" alt="ice1">                                
+        </picture>
+
+        <picture class="gallery__container__trans">
+            <source media="screen and (max-width: 767px)" srcset="/ice5_m1.c3d34212.png 1x, /ice5_m2.a5d4373b.png 2x">
+            <source media="screen and (min-width: 768px) and (max-width: 1199px)" srcset="/ice5_t1.c27e7809.png 1x, /ice5_t2.08f8a1d4.png 2x">
+            <source media="screen and (min-width: 1200px)" srcset="/ice5_d1.898ec02c.png 1x, /ice5_d2.ea23b317.png 2x">  
+            <img src="/ice5_m1.c3d34212.png" alt="ice1">                                
+        </picture>
+      </div>
+
+      <div class="gallery__container__c4">
+        <picture class="gallery__container__trans">
+            <source media="screen and (max-width: 767px)" srcset="/ice6_m1.e7fc6fb2.png 1x, /ice6_m2.0e8b6ed9.png 2x">
+            <source media="screen and (min-width: 768px) and (max-width: 1199px)" srcset="/ice6_t1.5db5d381.png 1x, /ice6_t2.a3e1363f.png 2x">
+            <source media="screen and (min-width: 1200px)" srcset="/ice6_d1.dad81a4e.png 1x, /ice6_d2.ae68b025.png 2x">  
+            <img src="/ice6_m1.e7fc6fb2.png" alt="ice1">                                
+        </picture>
+
+        <picture class="gallery__container__trans">
+            <source media="screen and (max-width: 767px)" srcset="/ice7_m1.2d804e07.png 1x, /ice7_m2.9305c14e.png 2x">
+            <source media="screen and (min-width: 768px) and (max-width: 1199px)" srcset="/ice7_t1.ad1def69.png 1x, /ice7_t2.d1617737.png 2x">
+            <source media="screen and (min-width: 1200px)" srcset="/ice7_d1.c8bb048b.png 1x, /ice7_d2.c08a2069.png 2x">  
+            <img src="/ice7_m1.2d804e07.png" alt="ice1">                                
+        </picture>
+      </div>
+
+      <div class="gallery__container__c5">
+        <picture class="gallery__container__trans">
+            <source media="screen and (max-width: 767px)" srcset="/ice8_m1.f9294339.png 1x, /ice8_m2.cc9e912b.png 2x">
+            <source media="screen and (min-width: 768px) and (max-width: 1199px)" srcset="/ice8_t1.8a037bb7.png 1x, /ice8_t2.89e8474d.png 2x">
+            <source media="screen and (min-width: 1200px)" srcset="/ice8_d1.7ff41206.png 1x, /ice8_d2.d3e83663.png 2x">  
+            <img src="/ice8_m1.f9294339.png" alt="ice1">                                
+        </picture>
+
+        <picture class="gallery__container__trans">
+            <source media="screen and (max-width: 767px)" srcset="/ice9_m1.a5ec67fa.png 1x, /ice9_m2.4dd0ca72.png 2x">
+            <source media="screen and (min-width: 768px) and (max-width: 1199px)" srcset="/ice9_t1.1980dcd1.png 1x, /ice9_t2.c8147d56.png 2x">
+            <source media="screen and (min-width: 1200px)" srcset="/ice9_d1.7e1a2ad7.png 1x, /ice9_d2.f8f9e3ce.png 2x">  
+            <img src="/ice9_m1.a5ec67fa.png" alt="ice1">                                
+        </picture>
+      </div>
+
+      <div class="gallery__container__c6">
+        <picture class="gallery__container__trans">
+            <source media="screen and (max-width: 767px)" srcset="/ice10_m1.ae01030b.png 1x, /ice10_m2.69890717.png 2x">
+            <source media="screen and (min-width: 768px) and (max-width: 1199px)" srcset="/ice10_t1.9266ebff.png 1x, /ice10_t2.d82382a3.png 2x">
+            <source media="screen and (min-width: 1200px)" srcset="/ice10_d1.9a5e5edd.png 1x, /ice10_d2.977ac339.png 2x">  
+            <img src="/ice10_m1.ae01030b.png" alt="ice1">                                
+        </picture>
+      </div>
+      
+    </div>
+  </section>
+    <!-- Slider main container -->
+<section class="swiper container" id="carusel">
+    <!-- Additional required wrapper -->
+    <h2 hidden="" class="gallery">gallery</h2>
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        
+        <div class="customer-reviews container" id="testimonials">
+            <div class="customer-reviews__image">
+                <img src="/testimonials1.340edbaf.png" alt="first testmionial person image">
+          </div>
+  
+          <div class="customer-reviews__text-container">
+            <div class="container-text">
+              <p class="underline-text">
+                Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+                Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
+                ipsum primis in nibh vel risus.
+              </p>
+            </div>
+          </div>
+  
+          <div class="red-dots-container">
+            <div class="red-dot" data-swiper-parallax="-5000"></div>
+            <div class="red-dot" data-swiper-parallax="-15000"></div>
+            <div class="red-dot" data-swiper-parallax="-20000"></div>
+          </div>
+          <p class="reviewer-name">Emily, Los Angeles</p>
+        </div>
+
+    </div>
+
+      <div class="swiper-slide">
+        
+        <div class="customer-reviews container">
+          <div class="customer-reviews__image">
+            <img src="/testimonials2.cd12cd46.png" alt="first testmionial person image">
+          </div>
+  
+          <div class="customer-reviews__text-container">
+            <div class="container-text">
+              <p class="underline-text">
+                Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+                Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
+                ipsum primis in nibh vel risus.
+              </p>
+            </div>
+          </div>
+  
+          <div class="red-dots-container">
+            <div class="red-dot" data-swiper-parallax="-5000"></div>
+            <div class="red-dot" data-swiper-parallax="-15000"></div>
+            <div class="red-dot" data-swiper-parallax="-20000"></div>
+          </div>
+          <p class="reviewer-name">Sorana, Vaslui</p>
+        </div>
+
+      </div>
+
+      <div class="swiper-slide">
+      
+        <div class="customer-reviews container">
+          <div class="customer-reviews__image">
+            <img src="/testimonials3.46ba1ae7.png" alt="first testmionial person image">
+          </div>
+  
+          <div class="customer-reviews__text-container">
+            <div class="container-text">
+              <p class="underline-text">
+                Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+                Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
+                ipsum primis in nibh vel risus.
+              </p>
+            </div>
+          </div>
+  
+          <div class="red-dots-container">
+            <div class="red-dot" data-swiper-parallax="-5000"></div>
+            <div class="red-dot" data-swiper-parallax="-15000"></div>
+            <div class="red-dot" data-swiper-parallax="-20000"></div>
+          </div>
+          <p class="reviewer-name">Clara, Bacau</p>
+        </div>
+
+      </div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <!-- <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div> -->
+  
+    <!-- If we need scrollbar -->
+    <!-- <div class="swiper-scrollbar"></div> -->
+    </section>
+
+  
+    <section class=" locations section" id="location">
+    <h2 hidden="" class="gallery">gallery</h2>
+    <div class="container">
+        <ul class="locations-list list">
+            <li class="locations-list__item">
+                <div class="locations-list__title ">Cafe</div>
+                <div class="locations-list__subdivision">
+                    <p class="locations-list__city ">Chicago</p>
+                    <p class="locations-list__description">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+                </div>
+                <div class="locations-list__subdivision">
+                    <p class="locations-list__days">Monday - Friday</p>
+                    <p class="locations-list__hours ">06:00 AM - 10:00 PM</p>
+                    <p class="locations-list__days">Saturday - Sunday</p>
+                    <p class="locations-list__hours">08:00 AM - 16:00 PM</p>
+                </div>
+                <div class="locations-list__subdivision">
+                    <address class="contacts">
+                        <ul class="list contacts__list ">
+                            <li class="contacts__item">
+                                <a class="contacts__link link" href="tel:+610383766284">
+                                    +61(0) 383 766 284
+                                </a>
+                            </li>
+                            <li class="contacts__item">
+                                <a class="contacts__link link" href="mailto:noreply@envato.com">
+                                    noreply@envato.com
+                                </a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+            </li>
+            <li class="locations-list__item">
+                <div class="locations-list__title locations-list__title--food">Foodtruck</div>
+                <div class="locations-list__subdivision">
+                    <p class="locations-list__city ">Los Angeles</p>
+                    <p class="locations-list__description">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+                </div>
+                <div class="locations-list__subdivision">
+                    <p class="locations-list__days">Monday - Friday</p>
+                    <p class="locations-list__hours ">06:00 AM - 10:00 PM</p>
+                    <p class="locations-list__days">Saturday - Sunday</p>
+                    <p class="locations-list__hours">08:00 AM - 16:00 PM</p>
+                </div>
+                <div class="locations-list__subdivision">
+                    <address class="contacts">
+                        <ul class="list contacts__list">
+                            <li>
+                                <a class="contacts__link link" href="tel:+610383766284">
+                                    +61(0) 383 766 284
+                                </a>
+                            </li>
+                            <li>
+                                <a class="contacts__link link" href="mailto:noreply@envato.com">
+                                    noreply@envato.com
+                                </a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+            </li>
+            <li class="locations-list__item">
+                <div class="locations-list__title cafe">Cafe</div>
+                <div class="locations-list__subdivision">
+                    <p class="locations-list__city ">New York</p>
+                    <p class="locations-list__description">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+                </div>
+                <div class="locations-list__subdivision">
+                    <p class="locations-list__days">Monday - Friday</p>
+                    <p class="locations-list__hours ">06:00 AM - 10:00 PM</p>
+                    <p class="locations-list__days">Saturday - Sunday</p>
+                    <p class="locations-list__hours">08:00 AM - 16:00 PM</p>
+                </div>
+                <div class="locations-list__subdivision">
+                    <address class="contacts">
+                        <ul class="list contacts__list">
+                            <li>
+                                <a class="contacts__link link" href="tel:+610383766284">
+                                    +61(0) 383 766 284
+                                </a>
+                            </li>
+                            <li>
+                                <a class="contacts__link link" href="mailto:noreply@envato.com">
+                                    noreply@envato.com
+                                </a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+            </li>
+        </ul>
+        <ul class="buttons-list list">
+            <li class="buttons-list__item">
+                <button data-modal-open="" class="location-button buttons-list__location" type="button">Our Locations
+                    <svg class="buttons-list__svg" width="12" height="12">
+                        <use href="/icons-svg.854772c7.svg#icon-btn-arrow1"></use>
+                    </svg>
+                </button>
+            </li>
+            <li class="buttons-list__item">
+                <form>
+                    <button formaction="https://corporatefinanceinstitute.com/resources/management/franchise/" class="
+                                                  buttons-list__franchise" type="submit">Franchise
+                        <svg width="10" height="10" fill="#d41342">
+                            <use href="/icons-svg.854772c7.svg#icon-btn-arrow"></use>
+                        </svg>
+                    </button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</section>
+    <footer class="footer" id="footer">
+    <div class=" container container-footer">
+        <div class="footer-title">
+            <p class="footer-title__subtitle">homemade ice cream made</p>
+            <p class="footer-title__subtitle2">with passion</p>
+        </div>
+        <div class="social-media">
+            <ul class="social-media__list unstyled-list">
+                <li class="social-media__item">
+                    <a href="https://github.com/" class="social-media__link" target="_blank" rel="noopener noreferrer">
+                        <svg class="social-media__icon">
+
+                            <use href="/icons-svg.854772c7.svg#icon-Vector-9"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-media__item">
+                    <a href="https://web.telegram.org/" class="social-media__link" target="_blank" rel="noopener noreferrer">
+                        <svg class="social-media__icon">
+                            <use href="/icons-svg.854772c7.svg#icon-telegram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-media__item">
+                    <a href="https://www.facebook.com/" class="social-media__link" target="_blank" rel="noopener noreferrer">
+                        <svg class="social-media__icon">
+                            <use href="/icons-svg.854772c7.svg#icon-Vector-10"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <div class="footer-contact">
+                <p class="footer-contact__text">Feel free to contact</p>
+                <a href="tel:+610383766284" class="footer-contact__phone">+61 (0) 383 766 284</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-rights">
+        <p class="footer-rights__paragraf">&#169; 2023 - IceCream. All Rights Reserved.</p>
+    </div>
+</footer>
+  </main>
+  <script src="/index.e5e95213.js"></script>
+  <script src="/index.820ed8e9.js"></script>
+  <script src="/index.4ed5b009.js"></script>
+  <script src="/index.130c77a0.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="/index.d3dbad53.js"></script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js" integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA==" crossorigin="anonymous"></script>
+  <script src="/index.707f265c.js"></script>
+</body>
+</html>
